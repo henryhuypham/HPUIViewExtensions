@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-                        Prebuilt UI classes that support often-used UI features.
+                        Prebuilt UI classes that support often-used UI features; which can help reduce the amount of UI code needed in View Controllers.
                        DESC
 
   s.homepage         = "https://github.com/huyphamthanh8290/HPUIViewExtensions"
