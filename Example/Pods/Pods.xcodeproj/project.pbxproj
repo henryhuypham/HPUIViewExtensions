@@ -16,6 +16,9 @@
 		873793781BE70FC000F029D5 /* HPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873793771BE70FC000F029D5 /* HPView.swift */; };
 		8737937A1BE710BA00F029D5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873793791BE710BA00F029D5 /* Utils.swift */; };
 		8737938A1BE7538B00F029D5 /* UIInternalProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873793891BE7538B00F029D5 /* UIInternalProxy.swift */; };
+		8737938C1BE754D900F029D5 /* HPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8737938B1BE754D900F029D5 /* HPLabel.swift */; };
+		8737938E1BE7556200F029D5 /* HPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8737938D1BE7556200F029D5 /* HPTextField.swift */; };
+		873793901BE7586C00F029D5 /* HPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8737938F1BE7586C00F029D5 /* HPImageView.swift */; };
 		ACF4D9E713BC700897FB2DA0F0777C44 /* HPUIViewExtensions.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 269E3CB3015DDDB2547AE610AF537E3E /* HPUIViewExtensions.bundle */; };
 		B0D3BF6B14548ADF003C4B3D66DC9E1E /* Pods-HPUIViewExtensions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 118D67F08495F5F3AAAA12A57AAB0066 /* Pods-HPUIViewExtensions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB0A4F1357A44CA25CFC29EA68E7209D /* HPUIViewExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B23409A842DDC8838154B67A6C2D83 /* HPUIViewExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +72,9 @@
 		873793771BE70FC000F029D5 /* HPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPView.swift; sourceTree = "<group>"; };
 		873793791BE710BA00F029D5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		873793891BE7538B00F029D5 /* UIInternalProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInternalProxy.swift; sourceTree = "<group>"; };
+		8737938B1BE754D900F029D5 /* HPLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPLabel.swift; sourceTree = "<group>"; };
+		8737938D1BE7556200F029D5 /* HPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPTextField.swift; sourceTree = "<group>"; };
+		8737938F1BE7586C00F029D5 /* HPImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPImageView.swift; sourceTree = "<group>"; };
 		874BE7A3AB1C1DAFB1E77F4F9B3C788F /* Pods_HPUIViewExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPUIViewExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE95D7CB0BF929D8240AEA09C1F3C4D /* Pods_HPUIViewExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPUIViewExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D14854C4BB84E71260D8F3B090325C8 /* Pods-HPUIViewExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HPUIViewExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -192,8 +198,11 @@
 			isa = PBXGroup;
 			children = (
 				873793791BE710BA00F029D5 /* Utils.swift */,
-				873793771BE70FC000F029D5 /* HPView.swift */,
 				873793891BE7538B00F029D5 /* UIInternalProxy.swift */,
+				873793771BE70FC000F029D5 /* HPView.swift */,
+				8737938B1BE754D900F029D5 /* HPLabel.swift */,
+				8737938D1BE7556200F029D5 /* HPTextField.swift */,
+				8737938F1BE7586C00F029D5 /* HPImageView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -432,7 +441,10 @@
 				873793781BE70FC000F029D5 /* HPView.swift in Sources */,
 				8737938A1BE7538B00F029D5 /* UIInternalProxy.swift in Sources */,
 				4D4319B6B487BEFBF66701F6AD7934F5 /* HPUIViewExtensions-dummy.m in Sources */,
+				8737938C1BE754D900F029D5 /* HPLabel.swift in Sources */,
+				873793901BE7586C00F029D5 /* HPImageView.swift in Sources */,
 				8737937A1BE710BA00F029D5 /* Utils.swift in Sources */,
+				8737938E1BE7556200F029D5 /* HPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
