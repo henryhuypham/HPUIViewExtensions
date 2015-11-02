@@ -14,5 +14,8 @@ class Utils {
         let mask = CAShapeLayer()
         mask.path = path.CGPath
         view.layer.mask = mask
+        
+        // Reset corner radius to make Bezier Path to work
+        view.layer.cornerRadius = 0
     }
 }

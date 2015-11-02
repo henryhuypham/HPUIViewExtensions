@@ -1,27 +1,32 @@
 //
-//  HPUIView.swift
+//  UIInternalProxyObject.swift
 //  Pods
 //
 //  Created by Huy Pham on 11/2/15.
 //
 //
 
-import UIKit
+import Foundation
 
-@IBDesignable
-public class HPUIView: UIView {
+class UIInternalProxy {
+    
+    var subjectView: UIView?
+    
+    required init(subjectView: UIView) {
+        self.subjectView = subjectView
+    }
     
     // MARK: Border
     
     @IBInspectable var borderColor: UIColor? {
         didSet {
-            self.layer.borderColor = self.borderColor?.CGColor
+            self.subjectView!.layer.borderColor = self.borderColor?.CGColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat? {
+    @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
-            self.layer.borderWidth = self.borderWidth!
+            self.subjectView!.layer.borderWidth = self.borderWidth
         }
     }
     
@@ -30,32 +35,32 @@ public class HPUIView: UIView {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
-            self.layer.cornerRadius = self.cornerRadius
-            self.layer.masksToBounds = true
+            self.subjectView!.layer.cornerRadius = self.cornerRadius
+            self.subjectView!.layer.masksToBounds = true
         }
     }
     
     @IBInspectable var topLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     @IBInspectable var topRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     @IBInspectable var botLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     @IBInspectable var botRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
