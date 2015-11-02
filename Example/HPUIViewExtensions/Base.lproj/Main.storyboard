@@ -21,7 +21,7 @@
                                 <rect key="frame" x="6" y="20" width="308" height="538"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-Dk-5HA" userLabel="HPView" customClass="HPView" customModule="HPUIViewExtensions">
-                                        <rect key="frame" x="0.0" y="0.0" width="308" height="328"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="280"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -37,7 +37,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Padded Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYv-XX-oWA" userLabel="HPLabel" customClass="HPLabel" customModule="HPUIViewExtensions">
-                                        <rect key="frame" x="0.0" y="336" width="308" height="38"/>
+                                        <rect key="frame" x="0.0" y="288" width="308" height="38"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -62,7 +62,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Foy-hG-F8B" userLabel="HPTextField" customClass="HPTextField" customModule="HPUIViewExtensions">
-                                        <rect key="frame" x="0.0" y="382" width="308" height="48"/>
+                                        <rect key="frame" x="0.0" y="334" width="308" height="48"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IRz-eg-Quy"/>
@@ -88,7 +88,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignOut" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-sw-JwX" userLabel="HPImage" customClass="HPImageView" customModule="HPUIViewExtensions">
-                                        <rect key="frame" x="104" y="438" width="100" height="100"/>
+                                        <rect key="frame" x="104" y="390" width="100" height="100"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -107,12 +107,39 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THN-xe-sOR" userLabel="HPButton" customClass="HPButton" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="498" width="308" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0oX-xG-cFA"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button Text">
+                                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.67843137249999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="lt3-Dk-5HA" secondAttribute="trailing" id="CNn-Z8-m6x"/>
+                                    <constraint firstItem="THN-xe-sOR" firstAttribute="leading" secondItem="cel-ux-Erb" secondAttribute="leading" id="H0q-Qg-sfg"/>
                                     <constraint firstItem="Foy-hG-F8B" firstAttribute="leading" secondItem="cel-ux-Erb" secondAttribute="leading" id="Jf1-qL-ywg"/>
                                     <constraint firstAttribute="trailing" secondItem="XYv-XX-oWA" secondAttribute="trailing" id="TOT-sY-5bx"/>
+                                    <constraint firstAttribute="trailing" secondItem="THN-xe-sOR" secondAttribute="trailing" id="Zhu-5c-kTO"/>
                                     <constraint firstItem="lt3-Dk-5HA" firstAttribute="leading" secondItem="cel-ux-Erb" secondAttribute="leading" id="ekT-Yi-NLU"/>
                                     <constraint firstAttribute="trailing" secondItem="Foy-hG-F8B" secondAttribute="trailing" id="tFA-F5-c0z"/>
                                     <constraint firstItem="XYv-XX-oWA" firstAttribute="leading" secondItem="cel-ux-Erb" secondAttribute="leading" id="zZa-3d-cei"/>
