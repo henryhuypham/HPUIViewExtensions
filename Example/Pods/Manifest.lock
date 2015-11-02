@@ -1,0 +1,14 @@
+PODS:
+  - HPUIViewExtensions (0.1.0)
+
+DEPENDENCIES:
+  - HPUIViewExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  HPUIViewExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HPUIViewExtensions: 81d773c88384c26bcffb8eaf17c29cb01d510eb1
+
+COCOAPODS: 0.39.0

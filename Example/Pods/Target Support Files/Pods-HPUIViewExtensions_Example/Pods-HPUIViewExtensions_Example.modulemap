@@ -1,0 +1,6 @@
+framework module Pods_HPUIViewExtensions_Example {
+  umbrella header "Pods-HPUIViewExtensions_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
