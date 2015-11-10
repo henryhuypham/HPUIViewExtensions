@@ -16,15 +16,16 @@ class UIInternalProxy {
         self.subjectView = subjectView
     }
     
+    
     // MARK: Border
     
-    @IBInspectable var borderColor: UIColor? {
+    var borderColor: UIColor? {
         didSet {
             self.subjectView!.layer.borderColor = self.borderColor?.CGColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    var borderWidth: CGFloat = 0 {
         didSet {
             self.subjectView!.layer.borderWidth = self.borderWidth
         }
@@ -33,32 +34,32 @@ class UIInternalProxy {
     
     // MARK: Corner
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    var cornerRadius: CGFloat = 0 {
         didSet {
             self.subjectView!.layer.cornerRadius = self.cornerRadius
             self.subjectView!.layer.masksToBounds = true
         }
     }
     
-    @IBInspectable var topLeftRounded: Bool = true {
+    var topLeftRounded: Bool = true {
         didSet {
             Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
-    @IBInspectable var topRightRounded: Bool = true {
+    var topRightRounded: Bool = true {
         didSet {
             Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
-    @IBInspectable var botLeftRounded: Bool = true {
+    var botLeftRounded: Bool = true {
         didSet {
             Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
-    @IBInspectable var botRightRounded: Bool = true {
+    var botRightRounded: Bool = true {
         didSet {
             Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
