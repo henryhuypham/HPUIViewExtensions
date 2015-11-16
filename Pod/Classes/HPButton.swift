@@ -83,4 +83,16 @@ public class HPButton: UIButton {
             setBackgroundImage(Utils.imageWithSolidColor(self.tintColor!, size: self.bounds.size), forState: UIControlState.Highlighted)
         }
     }
+    
+    
+    // MARK: Button Image
+    
+    @IBInspectable var buttonImage: UIImage? {
+        didSet {
+            self.imageView?.contentMode = .ScaleAspectFit
+            
+            setImage(self.buttonImage!, forState: .Normal)
+            setImage(self.buttonImage!, forState: .Highlighted)
+        }
+    }
 }

@@ -81,6 +81,10 @@ public class HPTextField: UITextField {
     
     @IBInspectable var paddingEnd: Float = 0
     
+    @IBInspectable var paddingTop: Float = 0
+    
+    @IBInspectable var paddingBottom: Float = 0
+    
     override public func textRectForBounds(bounds: CGRect) -> CGRect {
         return super.textRectForBounds(makeRectInset(bounds))
     }
@@ -90,7 +94,16 @@ public class HPTextField: UITextField {
     }
     
     private func makeRectInset(bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, CGFloat(paddingStart), 0, CGFloat(paddingEnd)))
+        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(CGFloat(paddingTop), CGFloat(paddingStart), CGFloat(paddingBottom), CGFloat(paddingEnd)))
     }
 
+    
+    // MARK: Placeholder
+    
+    @IBInspectable var placeholderColor: UIColor? {
+        didSet {
+            let holderStr = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: self.placeholderColor!])
+            self.attributedPlaceholder = holderStr
+        }
+    }
 }
