@@ -29,13 +29,13 @@ public class HPButton: UIButton {
     
     // MARK: Border
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         didSet {
             self.internalProxy?.borderColor = self.borderColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             self.internalProxy?.borderWidth = self.borderWidth
         }
@@ -44,31 +44,31 @@ public class HPButton: UIButton {
     
     // MARK: Corner
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             self.internalProxy?.cornerRadius = self.cornerRadius
         }
     }
     
-    @IBInspectable var topLeftRounded: Bool = true {
+    @IBInspectable public var topLeftRounded: Bool = true {
         didSet {
             self.internalProxy?.topLeftRounded = self.topLeftRounded
         }
     }
     
-    @IBInspectable var topRightRounded: Bool = true {
+    @IBInspectable public var topRightRounded: Bool = true {
         didSet {
             self.internalProxy?.topRightRounded = self.topRightRounded
         }
     }
     
-    @IBInspectable var botLeftRounded: Bool = true {
+    @IBInspectable public var botLeftRounded: Bool = true {
         didSet {
             self.internalProxy?.botLeftRounded = self.botLeftRounded
         }
     }
     
-    @IBInspectable var botRightRounded: Bool = true {
+    @IBInspectable public var botRightRounded: Bool = true {
         didSet {
             self.internalProxy?.botRightRounded = self.botRightRounded
         }
@@ -77,7 +77,7 @@ public class HPButton: UIButton {
     
     // MARK: Background
     
-    @IBInspectable var bgColor: UIColor? {
+    @IBInspectable public var bgColor: UIColor? {
         didSet {
             setBackgroundImage(Utils.imageWithSolidColor(self.bgColor!, size: self.bounds.size), forState: UIControlState.Normal)
             setBackgroundImage(Utils.imageWithSolidColor(self.tintColor!, size: self.bounds.size), forState: UIControlState.Highlighted)
@@ -87,7 +87,7 @@ public class HPButton: UIButton {
     
     // MARK: Button Image
     
-    var buttonImageMode: UIViewContentMode? {
+    public var buttonImageMode: UIViewContentMode? {
         didSet {
             self.imageView?.contentMode = self.buttonImageMode!
         }
@@ -129,7 +129,7 @@ public class HPButton: UIButton {
         }
     }
     
-    @IBInspectable var buttonImage: UIImage? {
+    @IBInspectable public var buttonImage: UIImage? {
         didSet {
             self.imageView?.contentMode = buttonImageMode ?? .ScaleAspectFit
             

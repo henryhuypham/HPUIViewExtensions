@@ -29,13 +29,13 @@ public class HPTextField: UITextField {
     
     // MARK: Border
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         didSet {
             self.internalProxy?.borderColor = self.borderColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             self.internalProxy?.borderWidth = self.borderWidth
         }
@@ -44,31 +44,31 @@ public class HPTextField: UITextField {
     
     // MARK: Corner
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             self.internalProxy?.cornerRadius = self.cornerRadius
         }
     }
     
-    @IBInspectable var topLeftRounded: Bool = true {
+    @IBInspectable public var topLeftRounded: Bool = true {
         didSet {
             self.internalProxy?.topLeftRounded = self.topLeftRounded
         }
     }
     
-    @IBInspectable var topRightRounded: Bool = true {
+    @IBInspectable public var topRightRounded: Bool = true {
         didSet {
             self.internalProxy?.topRightRounded = self.topRightRounded
         }
     }
     
-    @IBInspectable var botLeftRounded: Bool = true {
+    @IBInspectable public var botLeftRounded: Bool = true {
         didSet {
             self.internalProxy?.botLeftRounded = self.botLeftRounded
         }
     }
     
-    @IBInspectable var botRightRounded: Bool = true {
+    @IBInspectable public var botRightRounded: Bool = true {
         didSet {
             self.internalProxy?.botRightRounded = self.botRightRounded
         }
@@ -77,13 +77,13 @@ public class HPTextField: UITextField {
     
     // MARK: Padding
     
-    @IBInspectable var paddingStart: Float = 0
+    @IBInspectable public var paddingStart: Float = 0
     
-    @IBInspectable var paddingEnd: Float = 0
+    @IBInspectable public var paddingEnd: Float = 0
     
-    @IBInspectable var paddingTop: Float = 0
+    @IBInspectable public var paddingTop: Float = 0
     
-    @IBInspectable var paddingBottom: Float = 0
+    @IBInspectable public var paddingBottom: Float = 0
     
     override public func textRectForBounds(bounds: CGRect) -> CGRect {
         return super.textRectForBounds(makeRectInset(bounds))
@@ -100,7 +100,7 @@ public class HPTextField: UITextField {
     
     // MARK: Placeholder
     
-    @IBInspectable var placeholderColor: UIColor? {
+    @IBInspectable public var placeholderColor: UIColor? {
         didSet {
             let holderStr = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: self.placeholderColor!])
             self.attributedPlaceholder = holderStr
