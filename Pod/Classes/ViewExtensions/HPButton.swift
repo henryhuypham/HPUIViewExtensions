@@ -87,9 +87,54 @@ public class HPButton: UIButton {
     
     // MARK: Button Image
     
+    var buttonImageMode: UIViewContentMode? {
+        didSet {
+            self.imageView?.contentMode = self.buttonImageMode!
+        }
+    }
+    
+    @IBInspectable var btImageMode: String? {
+        didSet {
+            let mode = btImageMode?.stringByReplacingOccurrencesOfString(" ", withString: "").lowercaseString
+            switch mode! {
+                case "bottom":
+                    self.buttonImageMode = UIViewContentMode.Bottom
+                case "bottomleft":
+                    self.buttonImageMode = UIViewContentMode.BottomLeft
+                case "bottomright":
+                    self.buttonImageMode = UIViewContentMode.BottomRight
+                case "center":
+                    self.buttonImageMode = UIViewContentMode.Center
+                case "left":
+                    self.buttonImageMode = UIViewContentMode.Left
+                case "redraw":
+                    self.buttonImageMode = UIViewContentMode.Redraw
+                case "right":
+                    self.buttonImageMode = UIViewContentMode.Right
+                case "aspectfill":
+                    self.buttonImageMode = UIViewContentMode.ScaleAspectFill
+                case "aspectfit":
+                    self.buttonImageMode = UIViewContentMode.ScaleAspectFit
+                case "scaletofill":
+                    self.buttonImageMode = UIViewContentMode.ScaleToFill
+                case "top":
+                    self.buttonImageMode = UIViewContentMode.Top
+                case "topleft":
+                    self.buttonImageMode = UIViewContentMode.TopLeft
+                case "topright":
+                    self.buttonImageMode = UIViewContentMode.TopRight
+                default:
+                    self.buttonImageMode = .ScaleAspectFit
+            }
+        }
+    }
+    
     @IBInspectable var buttonImage: UIImage? {
         didSet {
-            self.imageView?.contentMode = .ScaleAspectFit
+            self.imageView?.contentMode = buttonImageMode ?? .ScaleAspectFit
+            
+            self.contentHorizontalAlignment = .Fill
+            self.contentVerticalAlignment = .Fill
             
             setImage(self.buttonImage!, forState: .Normal)
             setImage(self.buttonImage!, forState: .Highlighted)
