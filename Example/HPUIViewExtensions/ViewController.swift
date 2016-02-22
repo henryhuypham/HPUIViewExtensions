@@ -11,11 +11,14 @@ import HPUIViewExtensions
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageButton: HPButton!
+    @IBOutlet weak var label: HPLabel!
+    @IBOutlet weak var labelHeight: NSLayoutConstraint!
+    @IBOutlet weak var textField: HPTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        textField.setError("Hahaha")
     }
 }
 

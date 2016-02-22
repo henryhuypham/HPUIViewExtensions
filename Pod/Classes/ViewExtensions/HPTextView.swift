@@ -1,23 +1,23 @@
 //
-//  HPLabel.swift
+//  HPTextView.swift
 //  Pods
 //
-//  Created by Huy Pham on 11/2/15.
+//  Created by Huy Pham on 2/22/16.
 //
 //
 
 import UIKit
 
 @IBDesignable
-public class HPLabel: UILabel {
+public class HPTextView: UITextView {
 
     var internalProxy: UIInternalProxy?
     
     
     // MARK: Init
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
         internalProxy = UIInternalProxy(subjectView: self)
     }
     
@@ -71,42 +71,6 @@ public class HPLabel: UILabel {
     @IBInspectable public var botRightRounded: Bool = true {
         didSet {
             self.internalProxy?.botRightRounded = self.botRightRounded
-        }
-    }
-
-    
-    // MARK: Padding
-    
-    @IBInspectable public var paddingStart: Float = 0
-    
-    @IBInspectable public var paddingEnd: Float = 0
-    
-    @IBInspectable public var paddingTop: Float = 0
-    
-    @IBInspectable public var paddingBottom: Float = 0
-    
-    override public func drawTextInRect(rect: CGRect) {
-        super.drawTextInRect(makeRectInset(bounds))
-    }
-    
-    override public func textRectForBounds(bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
-        return super.textRectForBounds(makeRectInset(bounds), limitedToNumberOfLines: numberOfLines)
-    }
-    
-    private func makeRectInset(bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(CGFloat(paddingTop), CGFloat(paddingStart), CGFloat(paddingBottom), CGFloat(paddingEnd)))
-    }
-    
-    public override func didMoveToWindow() {
-        for ct: NSLayoutConstraint in self.constraints {
-            if ct.dynamicType !== NSLayoutConstraint.self {
-                continue
-            }
-            if (ct.firstAttribute == NSLayoutAttribute.Height && ct.firstItem as? HPLabel == self) || (ct.secondAttribute == NSLayoutAttribute.Height && ct.secondItem as? HPLabel == self) {
-                print(ct.constant)
-                ct.constant += (CGFloat(paddingTop) + CGFloat(paddingBottom))
-                break
-            }
         }
     }
 }

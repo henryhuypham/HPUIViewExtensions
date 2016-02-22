@@ -1,6 +1,6 @@
 {
   "name": "HPUIViewExtensions",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "summary": "Prebuilt UI classes that support often-used UI features.",
   "description": "Prebuilt UI classes that support often-used UI features; which can help reduce the amount of UI code needed in View Controllers.",
   "homepage": "https://github.com/huyphamthanh8290/HPUIViewExtensions",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/huyphamthanh8290/HPUIViewExtensions.git",
-    "tag": "0.1.16"
+    "tag": "0.1.17"
   },
   "platforms": {
     "ios": "8.0"

@@ -106,4 +106,16 @@ public class HPTextField: UITextField {
             self.attributedPlaceholder = holderStr
         }
     }
+    
+    
+    // MARK: Error Icon & Message
+    
+    public func setError(message: String) {
+        let errorIcon = UIImageView(frame: CGRectMake(0, 0, 25, 25))
+        errorIcon.contentMode = .ScaleAspectFit
+        errorIcon.image = UIImage(named: "ic_error")
+        
+        self.rightView = errorIcon
+        self.rightViewMode = .UnlessEditing
+    }
 }
