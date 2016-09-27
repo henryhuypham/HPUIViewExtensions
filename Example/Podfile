@@ -1,12 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'HPUIViewExtensions_Example', :exclusive => true do
+target 'HPUIViewExtensions_Example' do
   pod "HPUIViewExtensions", :path => "../"
 end
 
-target 'HPUIViewExtensions_Tests', :exclusive => true do
+target 'HPUIViewExtensions_Tests' do
   pod "HPUIViewExtensions", :path => "../"
-
-  
 end

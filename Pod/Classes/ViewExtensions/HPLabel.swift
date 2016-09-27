@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 public class HPLabel: UILabel {
-
+    
     var internalProxy: UIInternalProxy?
     
     
@@ -73,7 +73,7 @@ public class HPLabel: UILabel {
             self.internalProxy?.botRightRounded = self.botRightRounded
         }
     }
-
+    
     
     // MARK: Padding
     
@@ -85,12 +85,12 @@ public class HPLabel: UILabel {
     
     @IBInspectable public var paddingBottom: Float = 0
     
-    override public func drawTextInRect(rect: CGRect) {
-        super.drawTextInRect(makeRectInset(bounds))
+    override public func drawText(in rect: CGRect) {
+        super.drawText(in: makeRectInset(bounds: bounds))
     }
     
-    override public func textRectForBounds(bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
-        return super.textRectForBounds(makeRectInset(bounds), limitedToNumberOfLines: numberOfLines)
+    override public func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+        return super.textRect(forBounds: makeRectInset(bounds: bounds), limitedToNumberOfLines: numberOfLines)
     }
     
     private func makeRectInset(bounds: CGRect) -> CGRect {
@@ -99,10 +99,10 @@ public class HPLabel: UILabel {
     
     public override func didMoveToWindow() {
         for ct: NSLayoutConstraint in self.constraints {
-            if ct.dynamicType !== NSLayoutConstraint.self {
+            if type(of: ct) !== NSLayoutConstraint.self {
                 continue
             }
-            if (ct.firstAttribute == NSLayoutAttribute.Height && ct.firstItem as? HPLabel == self) || (ct.secondAttribute == NSLayoutAttribute.Height && ct.secondItem as? HPLabel == self) {
+            if (ct.firstAttribute == NSLayoutAttribute.height && ct.firstItem as? HPLabel == self) || (ct.secondAttribute == NSLayoutAttribute.height && ct.secondItem as? HPLabel == self) {
                 print(ct.constant)
                 ct.constant += (CGFloat(paddingTop) + CGFloat(paddingBottom))
                 break

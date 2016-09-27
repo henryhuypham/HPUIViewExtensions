@@ -1,5 +1,5 @@
 PODS:
-  - HPUIViewExtensions (0.1.17)
+  - HPUIViewExtensions (0.1.19)
 
 DEPENDENCIES:
   - HPUIViewExtensions (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HPUIViewExtensions: 0a42551cfe37f417bd43f5c02c4b4475e5bba3aa
+  HPUIViewExtensions: 71b85922d110cb336f4baee566a3b26595e86dc9
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 57938c264031a8c94696af9d162edd328f12207f
+
+COCOAPODS: 1.1.0.rc.2

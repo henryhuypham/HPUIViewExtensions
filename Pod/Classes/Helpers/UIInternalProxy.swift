@@ -21,7 +21,7 @@ class UIInternalProxy {
     
     var borderColor: UIColor? {
         didSet {
-            self.subjectView!.layer.borderColor = self.borderColor?.CGColor
+            self.subjectView!.layer.borderColor = self.borderColor?.cgColor
         }
     }
     
@@ -43,25 +43,25 @@ class UIInternalProxy {
     
     var topLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var topRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var botLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var botRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
@@ -72,16 +72,16 @@ class UIInternalProxy {
         var corners: UIRectCorner = []
         
         if self.topLeftRounded {
-            corners = corners.union(.TopLeft)
+            corners = corners.union(.topLeft)
         }
         if self.topRightRounded {
-            corners = corners.union(.TopRight)
+            corners = corners.union(.topRight)
         }
         if self.botLeftRounded {
-            corners = corners.union(.BottomLeft)
+            corners = corners.union(.bottomLeft)
         }
         if self.botRightRounded {
-            corners = corners.union(.BottomRight)
+            corners = corners.union(.bottomRight)
         }
         
         return corners

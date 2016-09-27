@@ -79,8 +79,8 @@ public class HPButton: UIButton {
     
     @IBInspectable public var bgColor: UIColor? {
         didSet {
-            setBackgroundImage(Utils.imageWithSolidColor(self.bgColor!, size: self.bounds.size), forState: UIControlState.Normal)
-            setBackgroundImage(Utils.imageWithSolidColor(self.tintColor!, size: self.bounds.size), forState: UIControlState.Highlighted)
+            setBackgroundImage(Utils.imageWithSolidColor(color: self.bgColor!, size: self.bounds.size), for: .normal)
+            setBackgroundImage(Utils.imageWithSolidColor(color: self.tintColor!, size: self.bounds.size), for: .highlighted)
         }
     }
     
@@ -95,49 +95,50 @@ public class HPButton: UIButton {
     
     @IBInspectable var btImageMode: String? {
         didSet {
-            let mode = btImageMode?.stringByReplacingOccurrencesOfString(" ", withString: "").lowercaseString
+            let mode = btImageMode?.replacingOccurrences(of: " ", with: "").lowercased()
             switch mode! {
                 case "bottom":
-                    self.buttonImageMode = UIViewContentMode.Bottom
+                    self.buttonImageMode = UIViewContentMode.bottom
                 case "bottomleft":
-                    self.buttonImageMode = UIViewContentMode.BottomLeft
+                    self.buttonImageMode = UIViewContentMode.bottomLeft
                 case "bottomright":
-                    self.buttonImageMode = UIViewContentMode.BottomRight
+                    self.buttonImageMode = UIViewContentMode.bottomRight
                 case "center":
-                    self.buttonImageMode = UIViewContentMode.Center
+                    self.buttonImageMode = UIViewContentMode.center
                 case "left":
-                    self.buttonImageMode = UIViewContentMode.Left
+                    self.buttonImageMode = UIViewContentMode.left
                 case "redraw":
-                    self.buttonImageMode = UIViewContentMode.Redraw
+                    self.buttonImageMode = UIViewContentMode.redraw
                 case "right":
-                    self.buttonImageMode = UIViewContentMode.Right
+                    self.buttonImageMode = UIViewContentMode.right
                 case "aspectfill":
-                    self.buttonImageMode = UIViewContentMode.ScaleAspectFill
+                    self.buttonImageMode = UIViewContentMode.scaleAspectFill
                 case "aspectfit":
-                    self.buttonImageMode = UIViewContentMode.ScaleAspectFit
+                    self.buttonImageMode = UIViewContentMode.scaleAspectFit
                 case "scaletofill":
-                    self.buttonImageMode = UIViewContentMode.ScaleToFill
+                    self.buttonImageMode = UIViewContentMode.scaleToFill
                 case "top":
-                    self.buttonImageMode = UIViewContentMode.Top
+                    self.buttonImageMode = UIViewContentMode.top
                 case "topleft":
-                    self.buttonImageMode = UIViewContentMode.TopLeft
+                    self.buttonImageMode = UIViewContentMode.topLeft
                 case "topright":
-                    self.buttonImageMode = UIViewContentMode.TopRight
+                    self.buttonImageMode = UIViewContentMode.topRight
                 default:
-                    self.buttonImageMode = .ScaleAspectFit
+                    self.buttonImageMode = .scaleAspectFit
             }
         }
     }
     
     @IBInspectable public var buttonImage: UIImage? {
         didSet {
-            self.imageView?.contentMode = buttonImageMode ?? .ScaleAspectFit
+            self.imageView?.contentMode = buttonImageMode
+                ?? .scaleAspectFit
             
-            self.contentHorizontalAlignment = .Fill
-            self.contentVerticalAlignment = .Fill
+            self.contentHorizontalAlignment = .fill
+            self.contentVerticalAlignment = .fill
             
-            setImage(self.buttonImage!, forState: .Normal)
-            setImage(self.buttonImage!, forState: .Highlighted)
+            setImage(self.buttonImage!, for: .normal)
+            setImage(self.buttonImage!, for: .highlighted)
         }
     }
 }

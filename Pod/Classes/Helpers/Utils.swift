@@ -12,7 +12,7 @@ class Utils {
     class func roundCorners(view: UIView, corners:UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
-        mask.path = path.CGPath
+        mask.path = path.cgPath
         view.layer.mask = mask
         
         // Reset corner radius to make Bezier Path to work
@@ -20,12 +20,12 @@ class Utils {
     }
     
     class func imageWithSolidColor(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRectMake(0, 0, size.width, size.height)
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         color.setFill()
         UIRectFill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return image

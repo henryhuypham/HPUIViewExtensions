@@ -85,12 +85,12 @@ public class HPTextField: UITextField {
     
     @IBInspectable public var paddingBottom: Float = 0
     
-    override public func textRectForBounds(bounds: CGRect) -> CGRect {
-        return super.textRectForBounds(makeRectInset(bounds))
+    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+        return super.textRect(forBounds: makeRectInset(bounds: bounds))
     }
     
-    override public func editingRectForBounds(bounds: CGRect) -> CGRect {
-        return super.editingRectForBounds(makeRectInset(bounds))
+    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return super.editingRect(forBounds: makeRectInset(bounds: bounds))
     }
     
     private func makeRectInset(bounds: CGRect) -> CGRect {
@@ -111,11 +111,11 @@ public class HPTextField: UITextField {
     // MARK: Error Icon & Message
     
     public func setError(message: String) {
-        let errorIcon = UIImageView(frame: CGRectMake(0, 0, 25, 25))
-        errorIcon.contentMode = .ScaleAspectFit
+        let errorIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        errorIcon.contentMode = .scaleAspectFit
         errorIcon.image = UIImage(named: "ic_error")
         
         self.rightView = errorIcon
-        self.rightViewMode = .UnlessEditing
+        self.rightViewMode = .unlessEditing
     }
 }
