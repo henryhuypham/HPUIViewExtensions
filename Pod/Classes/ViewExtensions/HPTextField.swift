@@ -118,4 +118,57 @@ public class HPTextField: UITextField {
         self.rightView = errorIcon
         self.rightViewMode = .unlessEditing
     }
+    
+    // MARK: Keyboard Type
+    
+    @IBInspectable var secure: Bool = false {
+        didSet {
+            self.isSecureTextEntry = secure
+        }
+    }
+    
+    @IBInspectable public var inputType: String = "Default" {
+        didSet {
+            self.keyboardType = parseKeyboardType(type: inputType)
+        }
+    }
+    
+    private func parseKeyboardType(type: String) -> UIKeyboardType {
+        let kbType = type.lowercased().replacingOccurrences(of: " ", with: "")
+        
+        if kbType.contains("ascii") {
+            return .asciiCapable
+        }
+        if kbType.contains("asciinumber") {
+            if #available(iOS 10.0, *) {
+                return .asciiCapableNumberPad
+            }
+        }
+        if kbType.contains("numbers") {
+            return .numbersAndPunctuation
+        }
+        if kbType.contains("url") {
+            return .URL
+        }
+        if kbType.contains("numberpad") {
+            return .numberPad
+        }
+        if kbType.contains("phonepad") {
+            return .phonePad
+        }
+        if kbType.contains("name") {
+            return .namePhonePad
+        }
+        if kbType.contains("email") {
+            return .emailAddress
+        }
+        if kbType.contains("decimalpad") {
+            return .decimalPad
+        }
+        if kbType.contains("web") {
+            return .webSearch
+        }
+        
+        return UIKeyboardType.default
+    }
 }
