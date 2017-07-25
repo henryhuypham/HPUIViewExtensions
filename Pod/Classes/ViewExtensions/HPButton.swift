@@ -84,6 +84,13 @@ public class HPButton: UIButton {
         }
     }
     
+    @IBInspectable public var bgImage: UIImage? {
+        didSet {
+            setBackgroundImage(bgImage, for: .normal)
+            setBackgroundImage(bgImage, for: .highlighted)
+        }
+    }
+    
     
     // MARK: Button Image
     
@@ -131,8 +138,7 @@ public class HPButton: UIButton {
     
     @IBInspectable public var buttonImage: UIImage? {
         didSet {
-            self.imageView?.contentMode = buttonImageMode
-                ?? .scaleAspectFit
+            self.imageView?.contentMode = buttonImageMode ?? .scaleAspectFit
             
             self.contentHorizontalAlignment = .fill
             self.contentVerticalAlignment = .fill
