@@ -9,7 +9,10 @@
 import UIKit
 
 class Utils {
-    class func roundCorners(view: UIView, corners:UIRectCorner, radius: CGFloat) {
+    
+    // MARK: Image Utils
+    
+    class func roundCorners(view: UIView, corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -29,5 +32,24 @@ class Utils {
         UIGraphicsEndImageContext()
         
         return image
+    }
+    
+    // MARK: Image Utils
+    
+    class func localize(text: String) -> String? {
+        return NSLocalizedString(text, comment: "")
+    }
+    
+    class func localizeWithDefinedMode(text: String?) -> String? {
+        guard let text = text else {
+            return nil
+        }
+        
+        switch HPUIViewExtensions.shared.localizationMode {
+        case .ByKey, .ByContent:
+            return Utils.localize(text: text)
+        default:
+            return text
+        }
     }
 }

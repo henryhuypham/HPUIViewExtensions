@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,6 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYv-XX-oWA" userLabel="HPLabel" customClass="HPLabel" customModule="HPUIViewExtensions">
+                                <rect key="frame" x="0.0" y="20" width="320" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="bNu-Ph-EhN"/>
@@ -55,8 +59,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cel-ux-Erb">
+                                <rect key="frame" x="6" y="120" width="308" height="770"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-Dk-5HA" userLabel="HPView" customClass="HPView" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="422"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -71,6 +77,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Foy-hG-F8B" userLabel="HPTextField" customClass="HPTextField" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="430" width="308" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IRz-eg-Quy"/>
                                         </constraints>
@@ -95,6 +102,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignOut" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-sw-JwX" userLabel="HPImage" customClass="HPImageView" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="104" y="486" width="100" height="100"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="B2a-th-BC9"/>
@@ -113,6 +121,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THN-xe-sOR" userLabel="HPButton" customClass="HPButton" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="594" width="308" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0oX-xG-cFA"/>
                                         </constraints>
@@ -136,6 +145,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-c9-NrN" customClass="HPButton" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="642" width="308" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="cfS-Ou-LCz"/>
                                         </constraints>
@@ -158,6 +168,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s3X-H9-yNS" customClass="HPTextView" customModule="HPUIViewExtensions">
+                                        <rect key="frame" x="0.0" y="710" width="308" height="60"/>
                                         <color key="backgroundColor" red="0.61960784310000006" green="0.79607843140000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="SVG-9j-Q8a"/>

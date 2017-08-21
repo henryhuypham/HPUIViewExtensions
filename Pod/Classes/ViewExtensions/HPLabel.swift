@@ -27,6 +27,19 @@ public class HPLabel: UILabel {
     }
     
     
+    // MARK: Text
+    
+    override public var text: String? {
+        get {
+            return super.text
+        }
+        
+        set(newText) {
+            super.text = Utils.localizeWithDefinedMode(text: newText)
+        }
+    }
+    
+    
     // MARK: Border
     
     @IBInspectable public var borderColor: UIColor? {

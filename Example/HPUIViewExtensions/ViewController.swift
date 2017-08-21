@@ -19,6 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textField.setError(message: "Hahaha")
+        label.text = "Bla bla"
     }
 }
-

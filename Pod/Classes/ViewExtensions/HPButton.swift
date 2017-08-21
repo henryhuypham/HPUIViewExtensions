@@ -105,31 +105,31 @@ public class HPButton: UIButton {
             let mode = btImageMode?.replacingOccurrences(of: " ", with: "").lowercased()
             switch mode! {
                 case "bottom":
-                    self.buttonImageMode = UIViewContentMode.bottom
+                    self.buttonImageMode = .bottom
                 case "bottomleft":
-                    self.buttonImageMode = UIViewContentMode.bottomLeft
+                    self.buttonImageMode = .bottomLeft
                 case "bottomright":
-                    self.buttonImageMode = UIViewContentMode.bottomRight
+                    self.buttonImageMode = .bottomRight
                 case "center":
-                    self.buttonImageMode = UIViewContentMode.center
+                    self.buttonImageMode = .center
                 case "left":
-                    self.buttonImageMode = UIViewContentMode.left
+                    self.buttonImageMode = .left
                 case "redraw":
-                    self.buttonImageMode = UIViewContentMode.redraw
+                    self.buttonImageMode = .redraw
                 case "right":
-                    self.buttonImageMode = UIViewContentMode.right
+                    self.buttonImageMode = .right
                 case "aspectfill":
-                    self.buttonImageMode = UIViewContentMode.scaleAspectFill
+                    self.buttonImageMode = .scaleAspectFill
                 case "aspectfit":
-                    self.buttonImageMode = UIViewContentMode.scaleAspectFit
+                    self.buttonImageMode = .scaleAspectFit
                 case "scaletofill":
-                    self.buttonImageMode = UIViewContentMode.scaleToFill
+                    self.buttonImageMode = .scaleToFill
                 case "top":
-                    self.buttonImageMode = UIViewContentMode.top
+                    self.buttonImageMode = .top
                 case "topleft":
-                    self.buttonImageMode = UIViewContentMode.topLeft
+                    self.buttonImageMode = .topLeft
                 case "topright":
-                    self.buttonImageMode = UIViewContentMode.topRight
+                    self.buttonImageMode = .topRight
                 default:
                     self.buttonImageMode = .scaleAspectFit
             }
