@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.setError(message: "Hahaha")
-        label.text = "Bla bla"
+//        textField.setError(message: "Hahaha")
+//        label.text = "Bla bla"
     }
 }

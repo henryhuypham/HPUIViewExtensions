@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; text = "Text Text"; ObjectID = "Foy-hG-F8B"; */
+"Foy-hG-F8B.text" = "Chữ Chữ";
+
+/* Class = "UIButton"; normalTitle = "Button Text"; ObjectID = "THN-xe-sOR"; */
+"THN-xe-sOR.normalTitle" = "Chữ Button";
+
+/* Class = "UILabel"; text = "Padded Label dfgdfgdfgdfgdfgdfg11\n2\n3\n4\n5"; ObjectID = "XYv-XX-oWA"; */
+"XYv-XX-oWA.text" = "Label có Padding dfgdfgdfgdfgdfgdfg11\n2\n3\n4\n5";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "s3X-H9-yNS"; */
+"s3X-H9-yNS.text" = "Tiếng Việt dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
