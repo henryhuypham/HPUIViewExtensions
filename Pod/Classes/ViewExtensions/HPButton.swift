@@ -27,6 +27,20 @@ public class HPButton: UIButton {
     }
     
     
+    // MARK: Localization
+    
+    public override func awakeFromNib() {
+        switch HPUIViewExtensions.shared.localizationMode {
+        case .ByContent:
+            setTitle(Utils.localizeWithDefinedMode(text: title(for: .normal)), for: .normal)
+        case .ByKey:
+            break
+        default:
+            break
+        }
+    }
+    
+    
     // MARK: Border
     
     @IBInspectable public var borderColor: UIColor? {

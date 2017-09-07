@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "HPUIViewExtensions"
-  s.version          = "0.1.21"
+  s.version          = "0.1.22"
   s.summary          = "Prebuilt UI classes that support often-used UI features."
 
 # This description is used to generate tags and improve search results.

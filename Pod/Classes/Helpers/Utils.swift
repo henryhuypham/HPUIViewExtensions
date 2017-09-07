@@ -36,10 +36,6 @@ class Utils {
     
     // MARK: Image Utils
     
-    class func localize(text: String) -> String? {
-        return NSLocalizedString(text, comment: "")
-    }
-    
     class func localizeWithDefinedMode(text: String?) -> String? {
         guard let text = text else {
             return nil
@@ -47,7 +43,7 @@ class Utils {
         
         switch HPUIViewExtensions.shared.localizationMode {
         case .ByKey, .ByContent:
-            return Utils.localize(text: text)
+            return NSLocalizedString(text, comment: "")
         default:
             return text
         }
