@@ -174,7 +174,7 @@ public class HPTextField: UITextField {
     
     // MARK: Enable Copy-Paste
     
-    @IBInspectable var copyEnabled: Bool = true
+    @IBInspectable public var copyEnabled: Bool = true
     
     public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {
