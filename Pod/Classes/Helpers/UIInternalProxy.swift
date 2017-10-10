@@ -10,7 +10,7 @@ import Foundation
 
 class UIInternalProxy {
     
-    var subjectView: UIView?
+    weak var subjectView: UIView?
     
     required init(subjectView: UIView) {
         self.subjectView = subjectView
@@ -21,13 +21,19 @@ class UIInternalProxy {
     
     var borderColor: UIColor? {
         didSet {
-            self.subjectView!.layer.borderColor = self.borderColor?.cgColor
+            guard let subjectView = subjectView else {
+                return
+            }
+            subjectView.layer.borderColor = self.borderColor?.cgColor
         }
     }
     
     var borderWidth: CGFloat = 0 {
         didSet {
-            self.subjectView!.layer.borderWidth = self.borderWidth
+            guard let subjectView = subjectView else {
+                return
+            }
+            subjectView.layer.borderWidth = self.borderWidth
         }
     }
     
@@ -36,32 +42,47 @@ class UIInternalProxy {
     
     var cornerRadius: CGFloat = 0 {
         didSet {
-            self.subjectView!.layer.cornerRadius = self.cornerRadius
-            self.subjectView!.layer.masksToBounds = true
+            guard let subjectView = subjectView else {
+                return
+            }
+            subjectView.layer.cornerRadius = self.cornerRadius
+            subjectView.layer.masksToBounds = true
         }
     }
     
     var topLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            guard let subjectView = subjectView else {
+                return
+            }
+            Utils.roundCorners(view: subjectView, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var topRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            guard let subjectView = subjectView else {
+                return
+            }
+            Utils.roundCorners(view: subjectView, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var botLeftRounded: Bool = true {
         didSet {
-            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            guard let subjectView = subjectView else {
+                return
+            }
+            Utils.roundCorners(view: subjectView, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
     var botRightRounded: Bool = true {
         didSet {
-            Utils.roundCorners(view: self.subjectView!, corners: getRoundedConfig(), radius: self.cornerRadius)
+            guard let subjectView = subjectView else {
+                return
+            }
+            Utils.roundCorners(view: subjectView, corners: getRoundedConfig(), radius: self.cornerRadius)
         }
     }
     
